@@ -1,6 +1,24 @@
 <%- include("partials/header"); -%>
 
 <br><h4> <%= UserID %> </h4>
-<p> <%= MessageBody %> (<%= TimestampUTC %>)</p>
+<div>
+    <% for(var i=0;i<MessageBody.length;i++){ %>
+        <p style="text-align: left;color: red"> <%= MessageBody[i] %> (<%= TimestampUTC[i] %>)</p>
+    <% } %>
+</div>
+<div>
+    <% for(var i=0;i<adminReplyArr.length;i++){ %>
+        <p style="text-align: right;color:green"> <%= adminReplyArr[i] %></p>
+    <% } %>
+</div>
+<form class="" action=<%- postRoute %> method="post">
+    <label for="newEntry">Reply</label><br>
+    <textarea name="newEntry" id="newEntry" value="" rows="4" cols="100"></textarea><br>
+    <label for="UserID">UserID</label><br>
+    <select id="UserID" name="UserID">
+        <option value="<%- UserID %>"><%= UserID %></option>
+    </select><br><br>
+    <button type="submit" name="button" style="background-color: #61A4BC;">Submit</button>
+</form><br>
 
 <%- include("partials/footer"); -%>

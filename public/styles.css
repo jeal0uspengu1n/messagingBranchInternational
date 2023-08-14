@@ -20,17 +20,17 @@ body{
 }
 
 .footer {
-	position: fixed;
+	position: sticky;
 	text-align: center;
-	bottom: 0;
 	width: 100%;
 	height: 60px;
 	background-color: #D4ECDD;
+  padding: 30px 30px 50px 30px;
 }
 
 .footer p {
+  color: black;
 	margin-top: auto;
-  padding-top: 25px;
-	font-size: 12px;
-  color: #fff;
+  margin-bottom: 30px;
+	font-size: 15px;
 }
