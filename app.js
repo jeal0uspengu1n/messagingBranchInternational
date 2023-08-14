@@ -26,7 +26,7 @@ map = new Map();
 map.set(0, []);
 map.get(0).push({
   TimestampUTC: "2017-02-01 19:21:58",
-  MessageBody: "I need some more information about the services offered by Branch International!"
+  MessageBody: "I need some more information about the services offered by Branch International! "
 });
 for(var i=0; i<dataArray.length; i++)
 {
